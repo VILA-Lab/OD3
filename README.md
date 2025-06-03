@@ -55,6 +55,7 @@ This codebase is built on [mmdetection](https://github.com/open-mmlab/mmdetectio
 
 If you find our work useful, please cite it:
 
+```bibtex
 @article{alkhatib2024od3,
   title={OD3: Optimization-free Dataset Distillation for Object Detection},
   author={Al Khatib, Salwa K. and ElHagry, Ahmed and Shao, Shitong and Shen, Zhiqiang},
