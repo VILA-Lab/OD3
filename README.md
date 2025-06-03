@@ -8,7 +8,7 @@
 
 
  
-<a href='' target="_blank">![paper](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)</a> [![Hugging Face Datasets](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Datasets-blue)](https://huggingface.co/datasets/VILA-Lab/OD3)</a>
+<a href='https://arxiv.org/abs/2506.01942' target="_blank">![paper](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)</a> [![Hugging Face Datasets](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Datasets-blue)](https://huggingface.co/datasets/VILA-Lab/OD3)</a>
  </div>
 
 ## 🧠 Abstract
@@ -50,3 +50,15 @@ sh scripts/data_synthesis.sh {output_dir} {original_dir} {IPD} {model (optional)
 ## 🙏 Acknowledgement
 
 This codebase is built on [mmdetection](https://github.com/open-mmlab/mmdetection).
+
+## 📖 Citation
+
+If you find our work useful, please cite it:
+
+@article{alkhatib2024od3,
+  title={OD3: Optimization-free Dataset Distillation for Object Detection},
+  author={Al Khatib, Salwa K. and ElHagry, Ahmed and Shao, Shitong and Shen, Zhiqiang},
+  journal={arXiv preprint arXiv:2506.01942},
+  year={2025}
+}
+
