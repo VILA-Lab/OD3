@@ -47,9 +47,25 @@ To distill the COCO dataset into a condensed version using **OD<sup>3</sup>**, r
 sh scripts/data_synthesis.sh {output_dir} {original_dir} {IPD} {model (optional)}
 ```
 
+You can also download distilled data from [![Hugging Face Datasets](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Datasets-blue)](https://huggingface.co/datasets/VILA-Lab/OD3).
+
+| dataset | IPD | files |
+|:---:|:---:|:---:|
+| MS COCO | 0.5% | [images](https://huggingface.co/datasets/VILA-Lab/OD3/blob/main/ms-coco-quarter-percent.zi)|
+| MS COCO | 0.5% | [images](https://huggingface.co/datasets/VILA-Lab/OD3/blob/main/ms-coco-half-percent.zip)|
+| MS COCO | 1.0% | [images](https://huggingface.co/datasets/VILA-Lab/OD3/blob/main/ms-coco-one-percent.zip)|
+
+## ✅ Evaluation
+
+To evaluate performance on a condensed dataset, run the following script with <code>training_config</code> (PKD config file e.g. <code>mmrazor/configs/distill/mmdet/pkd/pkd_fpn_faster-rcnn_r101_faster-rcnn_r50_2x_coco.py</code>), <code>num_gpus</code>, <code>data_annotation</code> (path to final_soft_labels.json), <code>data_dir</code> (root directory of output_dir), and <code>work_dir</code> (directory to save logs).
+
+```bash
+sh scripts/post_training.sh {training_config} {num_gpus} {data_annotation} {data_dir} {work_dir}
+```
+
 ## 🙏 Acknowledgement
 
-This codebase is built on [mmdetection](https://github.com/open-mmlab/mmdetection).
+This codebase is built on [mmdetection](https://github.com/open-mmlab/mmdetection) and [mmrazor](https://github.com/open-mmlab/mmrazor).
 
 ## 📖 Citation
 
@@ -62,4 +78,3 @@ If you find our work useful, please cite it:
   journal={arXiv preprint arXiv:2506.01942},
   year={2025}
 }
-

@@ -1,15 +1,16 @@
 #!/usr/bin/env bash
+
 OUTPUT_DIR=$1
 ORIGINAL_DIR=$2
 IPD=$3
 MODEL=${4:-fasterrcnn}
 
 if [ "$MODEL" = "retinanet" ]; then
-    CONFIG=./mmdetection/configs/dd/data_synthesis/data_synthesis_retinanet_r101_fpn_coco.py
+    CONFIG=./mmdetection/configs/dd/data_synthesis/data_synthesis_retinanet_101_coco.py
     CHECKPOINT=./mmdetection/checkpoints/retinanet_r101_fpn_2x_coco_20200131-5560aee8.pth
-    SOFT_LABEL_CONFIG=./mmdetection/configs/dd/soft_label/soft_label_retinanet_r101_fpn_2x_coco.py
+    SOFT_LABEL_CONFIG=./mmdetection/configs/dd/soft_label/soft_label_retina_net_101_fpn_2x_coco.py
 elif [ "$MODEL" = "fasterrcnn" ]; then
-    CONFIG=./mmdetection/configs/dd/data_synthesis/data_synthesis_faster-rcnn_r101_fpn_coco.py
+    CONFIG=./mmdetection/configs/dd/data_synthesis/data_synthesis_faster-rcnn_r50_fpn_1x_coco.py
     CHECKPOINT=./mmdetection/checkpoints/faster_rcnn_r101_fpn_2x_coco_bbox_mAP-0.398_20200504_210455-1d2dac9c.pth
     SOFT_LABEL_CONFIG=./mmdetection/configs/dd/soft_label/soft_label_faster-rcnn_r101_fpn_2x_coco.py
 else
@@ -21,7 +22,7 @@ mkdir -p ${OUTPUT_DIR}
 mkdir -p ${OUTPUT_DIR}/annotations
 mkdir -p ${OUTPUT_DIR}/images
 
-# run data synthesis for COCO
+run data synthesis for COCO
 python ./mmdetection/tools/dataset_distillation/data_synthesis.py \
         $CONFIG \
         $CHECKPOINT \
