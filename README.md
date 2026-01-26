@@ -11,6 +11,13 @@
 <a href='https://arxiv.org/abs/2506.01942' target="_blank">![paper](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)</a> [![Hugging Face Datasets](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Datasets-blue)](https://huggingface.co/datasets/VILA-Lab/OD3)</a> [![Follow @vila_shen_lab](https://img.shields.io/twitter/url?url=https%3A%2F%2Fx.com%2Fvila_shen_lab&label=Follow%20%40vila_shen_lab)](https://x.com/vila_shen_lab)
  </div>
 
+## 📰 News
+
+- **[2025-06-02]** OD³ is released on arXiv
+- **[2025-06-02]** Codebase released  
+- **[2025-06-13]** Distilled datasets released on Hugging Face 
+- **[2026-01-26]** Paper accepted to ICLR2026🔥 
+
 ## 🧠 Abstract
 Training large neural networks on large-scale datasets requires substantial computational resources, particularly for dense prediction tasks such as object detection. Although dataset distillation (DD) has been proposed to alleviate these demands by synthesizing compact datasets from larger ones, most existing work focuses solely on image classification, leaving the more complex detection setting largely unexplored. In this paper, we introduce OD<sup>3</sup>, a novel optimization-free data distillation framework specifically designed for object detection. Our approach involves two stages: first, a candidate selection process in which object instances are iteratively placed in synthesized images based on their suitable locations, and second, a candidate screening process using a pre-trained observer model to remove low-confidence objects. We perform our data synthesis framework on MS COCO and PASCAL VOC, two popular detection datasets, with compression ratios ranging from 0.25% to 5%. Compared to the prior solely existing dataset distillation method on detection and conventional core set selection methods, OD<sup>3</sup> delivers superior accuracy and establishes new state-of-the-art results, surpassing the prior best method by more than 14% on COCO mAP<sub>50</sub> at a compression ratio of 1.0%.
 <p align="center">
